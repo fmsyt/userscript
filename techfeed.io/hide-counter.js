@@ -17,10 +17,8 @@
 (function() {
     'use strict';
 
-    let hidden = false;
-
     const watcher = () => {
-        const elements = document.querySelectorALl(".tf-sticky:not([hidden])");
+        const elements = document.querySelectorAll(".tf-sticky");
         if (elements.length === 0) {
             return;
         }
@@ -32,7 +30,14 @@
     }
 
     const observer = new MutationObserver(watcher);
-    observer.observe(document.body, {childList: true, subtree: true});
+    const config = {
+        childList: true,
+        subtree: true
+    }
+
+    const target = document.getElementById("main-content");
+
+    observer.observe(target, config);
 
     watcher();
 })();
