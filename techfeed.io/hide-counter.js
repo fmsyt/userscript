@@ -7,8 +7,8 @@
 // @match        https://techfeed.io/categories/all
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=techfeed.io
 // @run-at       document-end
-// @updateURL    https://github.com/motsuni/userscript/raw/master/techfeed.io/hide-counter.js
-// @downloadURL  https://github.com/motsuni/userscript/raw/master/techfeed.io/hide-counter.js
+// @updateURL    https://raw.githubusercontent.com/fmsyt/userscript/master/techfeed.io/hide-counter.js
+// @downloadURL  https://raw.githubusercontent.com/fmsyt/userscript/master/techfeed.io/hide-counter.js
 // @supportURL   https://github.com/motsuni/userscript/techfeed.io
 // @license      MIT
 // @grant        none
