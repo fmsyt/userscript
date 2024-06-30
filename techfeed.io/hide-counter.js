@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hide TechFeed Counter
 // @namespace    motsuni
-// @version      1.0.0
+// @version      1.0.1
 // @description  Hide TechFeed Counter
 // @author       motsuni
 // @match        https://techfeed.io/categories/all
@@ -19,11 +19,7 @@
 
     const watcher = () => {
         const elements = document.querySelectorAll(".tf-sticky");
-        if (elements.length === 0) {
-            return;
-        }
-
-        [...elements].forEach((element) => {
+        Array.from(elements).forEach((element) => {
             element.hidden = true;
             element.style.display = "none";
         })
@@ -35,8 +31,7 @@
         subtree: true
     }
 
-    const target = document.getElementById("main-content");
-
+    const target = document.querySelector("body");
     observer.observe(target, config);
 
     watcher();
