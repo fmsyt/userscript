@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Hide TechFeed Counter
 // @namespace    motsuni
-// @version      1.0.1
+// @version      1.0.2
 // @description  Hide TechFeed Counter
 // @author       motsuni
-// @match        https://techfeed.io/categories/all
+// @match        https://techfeed.io/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=techfeed.io
 // @run-at       document-end
 // @updateURL    https://raw.githubusercontent.com/fmsyt/userscript/master/techfeed.io/hide-counter.js
