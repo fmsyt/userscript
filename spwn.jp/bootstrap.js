@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Full Screen SPWN Streaming
 // @namespace    motsuni
-// @version      1.0.0
+// @version      1.0.1
 // @description  
 // @author       motsuni
 // @match        https://spwn.jp/events/*/streaming
@@ -17,20 +17,23 @@
 (function() {
     'use strict';
 
-    const container = document.getElementById("container");
-
     const watcher = () => {
-        // max-width: 100% !important;
+        const container = document.getElementById("container");
+        if (!container) {
+            return;
+        }
+
         container.style.maxWidth = "100%";
     }
 
     const observer = new MutationObserver(watcher);
     const config = {
-        childList: false,
-        subtree: false
+        childList: true,
+        subtree: true
     }
 
-    observer.observe(container, config);
+    const target = document.querySelector("body");
+    observer.observe(target, config);
 
     watcher();
 })();
